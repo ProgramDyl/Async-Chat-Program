@@ -42,7 +42,7 @@ public class TcpClientApp
             }
             catch (Exception e)
             {
-                OnMessageReceived($"Error: {e.Message}");
+                // OnMessageReceived($"Error: {e.Message}");
                 break;
             }
 

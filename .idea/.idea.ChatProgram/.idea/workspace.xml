@@ -11,19 +11,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f4fcddf-c30f-4cc1-bbc1-171199da919d" name="Changes" comment="iunno">
-      <change afterPath="$PROJECT_DIR$/.vs/ChatProgram/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/ChatProgram/FileContentIndex/95dfbfbd-b7ea-46fc-96e8-ed77a204a5c8.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/ChatProgram/v17/.futdcache.v2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/ChatProgram/v17/.suo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/ChatProgram/v17/DocumentLayout.backup.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/ChatProgram/v17/DocumentLayout.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/ChatProgram/v17/ResourceExplorer/settings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/chatprogram.metadata.v9.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/chatprogram.projects.v9.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/chatprogram.strings.v9.bin" afterDir="false" />
+    <list default="true" id="2f4fcddf-c30f-4cc1-bbc1-171199da919d" name="Changes" comment="Rubric requirements FULLY REALIZED">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ChatProgram/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ChatProgram/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatLibrary/Server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ChatLibrary/Server.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatLibrary/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ChatLibrary/Client.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +73,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "31a4eed2",
+    "git-widget-placeholder": "cfc8d258",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -239,7 +229,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728743710623</updated>
-      <workItem from="1728743711700" duration="19240000" />
+      <workItem from="1728743711700" duration="19607000" />
     </task>
     <task id="LOCAL-00001" summary="DONE">
       <option name="closed" value="true" />
@@ -249,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728759348987</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Rubric requirements FULLY REALIZED">
+      <option name="closed" value="true" />
+      <created>1728768099026</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728768099026</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,6 +282,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="DONE" />
     <MESSAGE value="iunno" />
-    <option name="LAST_COMMIT_MESSAGE" value="iunno" />
+    <MESSAGE value="Rubric requirements FULLY REALIZED" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rubric requirements FULLY REALIZED" />
   </component>
 </project>
