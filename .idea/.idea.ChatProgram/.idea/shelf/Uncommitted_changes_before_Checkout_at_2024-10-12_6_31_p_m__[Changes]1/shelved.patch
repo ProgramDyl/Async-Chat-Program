@@ -1,0 +1,19 @@
+Index: ChatLibrary/Client.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using System.Net.Sockets;\r\nusing System.Text;\r\n\r\nnamespace ChatLibrary;\r\n\r\npublic class TcpClientApp\r\n{\r\n    private readonly int _port = 5000;\r\n    private readonly string _serverIp = \"127.0.0.1\";\r\n    private TcpClient client;\r\n    private NetworkStream stream;\r\n\r\n    public event EventHandler<string> MessageReceived;\r\n\r\n    public void Start()\r\n    {\r\n        try\r\n        {\r\n            client = new TcpClient(_serverIp, _port);\r\n            stream = client.GetStream();\r\n            Task.Run(() => ReceiveMessages());\r\n        }\r\n        catch (Exception e)\r\n        {\r\n            OnMessageReceived($\"Error: {e.Message}\");\r\n        }\r\n    }\r\n\r\n    private void ReceiveMessages()\r\n    {\r\n        var buffer = new byte[256];\r\n        int bytesRead;\r\n\r\n        while (true)\r\n            try\r\n            {\r\n                bytesRead = stream.Read(buffer, 0, buffer.Length);\r\n                if (bytesRead == 0) break;\r\n\r\n                var responseData = Encoding.ASCII.GetString(buffer, 0, bytesRead);\r\n                OnMessageReceived(responseData);\r\n            }\r\n            catch (Exception e)\r\n            {\r\n                OnMessageReceived($\"Error: {e.Message}\");\r\n                break;\r\n            }\r\n\r\n        stream?.Close();\r\n        client?.Close();\r\n    }\r\n\r\n    public void SendMessage(string message)\r\n    {\r\n        if (string.IsNullOrEmpty(message)) return;\r\n        var data = Encoding.ASCII.GetBytes(message);\r\n        stream?.Write(data, 0, data.Length);\r\n    }\r\n\r\n    protected virtual void OnMessageReceived(string message)\r\n    {\r\n        MessageReceived?.Invoke(this, message);\r\n    }\r\n\r\n    public void Close()\r\n    {\r\n        stream?.Close();\r\n        client?.Close();\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ChatLibrary/Client.cs b/ChatLibrary/Client.cs
+--- a/ChatLibrary/Client.cs	(revision 31a4eed2ca75adb8db62a9e7eb5aa8ecd7c66041)
++++ b/ChatLibrary/Client.cs	(date 1728768659981)
+@@ -42,7 +42,7 @@
+             }
+             catch (Exception e)
+             {
+-                OnMessageReceived($"Error: {e.Message}");
++                // OnMessageReceived($"Error: {e.Message}");
+                 break;
+             }
+ 

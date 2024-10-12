@@ -13,7 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2f4fcddf-c30f-4cc1-bbc1-171199da919d" name="Changes" comment="Rubric requirements FULLY REALIZED">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ChatProgram/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ChatProgram/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatLibrary/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ChatLibrary/Client.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,24 +28,24 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="v2-UI" />
+        <entry key="$PROJECT_DIR$" value="detached3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ProgramDyl"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ProgramDyl&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ProgramDyl/Async-Chat-Program.git",
-    "accountId": "02eea244-c823-44cf-9c63-66fcb3152093"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ProgramDyl/Async-Chat-Program.git&quot;,
+    &quot;accountId&quot;: &quot;02eea244-c823-44cf-9c63-66fcb3152093&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6ca9eeed5ec92b470cfd8148d94445b1da079212dd2884770655565a5218342/TCPClient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ChatClientUI/Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
@@ -54,9 +53,9 @@
     <setting file="file://$PROJECT_DIR$/ChatProgram/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2nLDxZLtlkSTEujbiF1mPFKzDUi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -73,7 +72,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "cfc8d258",
+    "git-widget-placeholder": "detached3",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
