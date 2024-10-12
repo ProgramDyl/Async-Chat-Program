@@ -1,14 +1,12 @@
-﻿using System;
-using ChatLibrary;
+﻿using ChatLibrary;
 
-namespace Server
+namespace Server;
+
+internal class Program
 {
-    class Program
+    private static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            TcpServer server = new TcpServer();
-            server.Start();
-        }
+        var server = new TcpServer();
+        server.Start();
     }
 }

@@ -1,70 +1,70 @@
-using System;
-using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ChatLibrary;
 
 public class TcpClientApp
 {
-    private string serverIp = "127.0.0.1";
-    private int port = 5000;
+    private readonly int _port = 5000;
+    private readonly string _serverIp = "127.0.0.1";
     private TcpClient client;
     private NetworkStream stream;
+
+    public event EventHandler<string> MessageReceived;
 
     public void Start()
     {
         try
         {
-            client = new TcpClient(serverIp, port);
+            client = new TcpClient(_serverIp, _port);
             stream = client.GetStream();
-
             Task.Run(() => ReceiveMessages());
-
-            while (true)
-            {
-                Console.Write("Enter a message to send: ");
-                string message = Console.ReadLine();
-
-                if (message == "exit")
-                {
-                    client.Close();
-                    break;
-                }
-
-                byte[] data = Encoding.ASCII.GetBytes(message);
-                stream.Write(data, 0, data.Length);
-            }
         }
         catch (Exception e)
         {
-            Console.WriteLine("Error: " + e.Message);
+            OnMessageReceived($"Error: {e.Message}");
         }
     }
 
     private void ReceiveMessages()
     {
-        byte[] buffer = new byte[256];
+        var buffer = new byte[256];
         int bytesRead;
 
         while (true)
-        {
             try
             {
                 bytesRead = stream.Read(buffer, 0, buffer.Length);
                 if (bytesRead == 0) break;
 
-                string responseData = Encoding.ASCII.GetString(buffer, 0, bytesRead);
-                Console.WriteLine("Received: " + responseData);
+                var responseData = Encoding.ASCII.GetString(buffer, 0, bytesRead);
+                OnMessageReceived(responseData);
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error: " + e.Message);
+                OnMessageReceived($"Error: {e.Message}");
                 break;
             }
-        }
 
-        client.Close();
+        stream?.Close();
+        client?.Close();
+    }
+
+    public void SendMessage(string message)
+    {
+        if (string.IsNullOrEmpty(message)) return;
+        var data = Encoding.ASCII.GetBytes(message);
+        stream?.Write(data, 0, data.Length);
+    }
+
+    protected virtual void OnMessageReceived(string message)
+    {
+        MessageReceived?.Invoke(this, message);
+    }
+
+    public void Close()
+    {
+        stream?.Close();
+        client?.Close();
     }
 }
